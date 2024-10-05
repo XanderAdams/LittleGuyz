@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078381906498364054}
   - component: {fileID: 1896361945873376136}
+  - component: {fileID: -1053587119346474138}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 6801605469166464090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 263.3, y: 86, z: -0.3117466}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,3 +135,31 @@ MonoBehaviour:
   damage: 2
   maxHP: 10
   currentHP: 10
+--- !u!114 &-1053587119346474138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801605469166464090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e75ff5344ed665498fb50e8461d12e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: 
+  level: 1
+  maxHealth: 100
+  currentHealth: 0
+  violence: 0
+  reinforcement: 0
+  swiftness: 0
+  TheNumber: 0
+  TheNumber2: 0
+  TheNumber3: 0
+  TheNumber4: 0
+  trait: 0
+  flesh: 0
+  hasTrait: 0
+  typemod: 0
+  exp: 0
