@@ -29,7 +29,7 @@ public class DiceRoller : MonoBehaviour
     //Dice Roller
     public int RollDie(int sides)
     {
-        int result;
+        int result; 
 
         result = Random.Range(1, sides+1);
 
