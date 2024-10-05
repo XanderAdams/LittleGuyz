@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Hopefullygridmovement : MonoBehaviour
 {
-        private bool isMoving;
+    private bool isMoving;
     private Vector3 oriPos, targetPos;
     private float timeToMove = 0.2f;
+
 
 
     // Update is called once per frame
@@ -40,5 +41,13 @@ public class Hopefullygridmovement : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            targetPos = oriPos;
+        }
+        
     }
 }
