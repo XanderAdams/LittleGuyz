@@ -154,5 +154,24 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerAttack());
     }
 
+    public void OnRunButton()
+    {
+        if(state == BattleState.PLAYERTURN)
+        {
+            if(enemyLittleGuy.swiftness <  playerLittleGuy.swiftness)
+            {
+                panel.SetActive(false);
+            }
+            else
+            {
+                dialogueText.text = "NO Escape";
+                
+                state = BattleState.ENEMYTURN;
+                StartCoroutine(EnemyTurn());
+            }
+            
+        }
+    }
+
 
 }
