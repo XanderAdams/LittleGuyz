@@ -12,15 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Mainmenu.unity
     guid: 1be3d880534d7c441b3bcb12a1db3ad6
   - enabled: 1
-    path: Assets/Scenes/Cooperbigguymovement.unity
-    guid: 2c2cd7cde8ddcc649a653a8e37a5bfec
-  - enabled: 1
     path: Assets/Scenes/DugeonFloor1.unity
     guid: 615fe8cc48ac9c34ab2fccaa031e4961
-  - enabled: 1
-    path: Assets/Scenes/BattleTestScene.unity
-    guid: a1b6b25a3413b0f4a9873a5fc0081335
-  - enabled: 1
-    path: Assets/Scenes/testing.unity
-    guid: 6e49198f305658f4995bc654751096ee
   m_configObjects: {}
