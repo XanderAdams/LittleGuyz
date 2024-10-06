@@ -65,6 +65,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         bool isDead = enemyLittleGuy.TakeDamage(playerLittleGuy.violence);
+        enemyHud.SetHP(enemyLittleGuy.currentHealth);
         dialogueText.text = "The attack hits";
 
         yield return new WaitForSeconds(2f);
