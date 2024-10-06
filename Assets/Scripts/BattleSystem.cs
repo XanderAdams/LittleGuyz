@@ -264,6 +264,10 @@ public class BattleSystem : MonoBehaviour
         if(!enemyLittleGuy.hasTrait)
         {
             enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().flesh;
+            if(!enemyLittleGuy.flesh)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().boss;
+            }
         }
         else if(enemyLittleGuy.flesh)
         {
