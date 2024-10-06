@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DugeonFloor1.unity
     guid: 615fe8cc48ac9c34ab2fccaa031e4961
+  - enabled: 1
+    path: Assets/Scenes/DungeonFloor2.unity
+    guid: 88e2e3127b3e1b14489eec143f07f1e8
   m_configObjects: {}
