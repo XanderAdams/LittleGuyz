@@ -119,9 +119,9 @@ public class LittleGuyzStats : MonoBehaviour
 
    public void LevelUp()
    {
-        TheNumber = Random.Range(0,11);
+        TheNumber = Random.Range(0,4);
         TheNumber2 = Random.Range(0,11);
-        TheNumber3 = Random.Range(0,11);
+        TheNumber3 = Random.Range(0,4);
         TheNumber4 = Random.Range(0,11);
         if(exp >= 100)
         {
