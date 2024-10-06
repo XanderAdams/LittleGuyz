@@ -1619,30 +1619,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 612783995089455130, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: unitName
-      value: Cooper
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: violence
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: currentHealth
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
-      propertyPath: reinforcement
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6727118252793486795, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
       propertyPath: m_Camera
       value: 
