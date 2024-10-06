@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6281979119291542675}
   - component: {fileID: 6474580728661885120}
   - component: {fileID: 6225997289485381223}
-  - component: {fileID: 5162813573674818275}
+  - component: {fileID: 825566435943909668}
   m_Layer: 0
   m_Name: info holder
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourGuy: {fileID: 6225997289485381223}
-  notYourGuy: {fileID: 5162813573674818275}
+  notYourGuy: {fileID: 0}
 --- !u!114 &6225997289485381223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   hasTrait: 0
   typemod: 0
   exp: 0
---- !u!114 &5162813573674818275
+--- !u!114 &825566435943909668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,22 +85,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3608812528277917363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e75ff5344ed665498fb50e8461d12e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b5c79ba1bbf2804ba2c6436c0ab74bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
-  level: 1
-  maxHealth: 0
-  currentHealth: 0
-  violence: 0
-  reinforcement: 0
-  swiftness: 0
-  TheNumber: 0
-  TheNumber2: 0
-  TheNumber3: 0
-  TheNumber4: 0
-  trait: 0
-  flesh: 0
-  hasTrait: 0
-  typemod: 0
-  exp: 0
+  flesh: {fileID: 9100000, guid: b0e5cbb8d3e4aa841b33633aa7de1c3b, type: 2}
+  fleshSharp: {fileID: 9100000, guid: 686e74dfae14f6a4b973c39419c61791, type: 2}
+  fleshSlime: {fileID: 9100000, guid: d9e601c02f9198e4a84db26176cc2ffe, type: 2}
+  fleshSolid: {fileID: 9100000, guid: 89a6faa19a7408149b916a68cb49feab, type: 2}
+  sharp: {fileID: 9100000, guid: 2a00c550bf6b5ec4d929791bdc9d35ba, type: 2}
+  slime: {fileID: 9100000, guid: a1e661ce963fbd540a77fe1485a75081, type: 2}
+  solid: {fileID: 9100000, guid: 2827c6c10357aa540a0acddd91fee742, type: 2}
