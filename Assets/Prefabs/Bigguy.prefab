@@ -567,7 +567,7 @@ RectTransform:
   m_Father: {fileID: 1461536154445110866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -886,6 +886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5746730643229026559}
   - component: {fileID: 7840603771248750766}
+  - component: {fileID: 6511657380657108216}
   m_Layer: 0
   m_Name: EnemyStation
   m_TagString: Untagged
@@ -902,8 +903,8 @@ Transform:
   m_GameObject: {fileID: 2705282108994998827}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 89, y: 86.999985, z: -4049.9993}
-  m_LocalScale: {x: 13.508948, y: 41.666664, z: 41.666664}
+  m_LocalPosition: {x: 89, y: 120, z: 0}
+  m_LocalScale: {x: 50, y: 154.21875, z: 154.21875}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3079690167589145729}
@@ -948,7 +949,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
   m_FlipX: 0
@@ -960,6 +961,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6511657380657108216
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705282108994998827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2754520646979351546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1730,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7397136860171326000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8536969158269311664}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnRunButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4864273769631832409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,8 +1787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f74c14db0b9cd74190b539468318020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBattleStation: {fileID: 1945116897023578372}
-  enemyBattleStation: {fileID: 5746730643229026559}
+  playerBattleStation: {fileID: 6629232172679488827}
+  enemyBattleStation: {fileID: 2705282108994998827}
   dialogueText: {fileID: 4476276650920069270}
   playerHUD: {fileID: 2643562884733635667}
   enemyHud: {fileID: 1246238603695467673}
@@ -1793,7 +1827,7 @@ RectTransform:
   m_Father: {fileID: 1542762154600048739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2383,6 +2417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945116897023578372}
   - component: {fileID: 4104251164038471592}
+  - component: {fileID: 905677598879907653}
   m_Layer: 0
   m_Name: PlayerStation
   m_TagString: Untagged
@@ -2399,8 +2434,8 @@ Transform:
   m_GameObject: {fileID: 6629232172679488827}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100, y: 86.999985, z: -4049.9993}
-  m_LocalScale: {x: 13.508948, y: 41.666664, z: 41.666664}
+  m_LocalPosition: {x: -100, y: 120, z: 0}
+  m_LocalScale: {x: 50, y: 154.21875, z: 154.21875}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3079690167589145729}
@@ -2445,7 +2480,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
   m_FlipX: 0
@@ -2457,6 +2492,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &905677598879907653
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6629232172679488827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6630125287368881214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,7 +3561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: flesh
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: hasTrait

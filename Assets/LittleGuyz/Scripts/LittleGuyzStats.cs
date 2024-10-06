@@ -1,8 +1,13 @@
 using UnityEngine;
- public enum Trait
-{sharp,slime,solid}
+ 
 public class LittleGuyzStats : MonoBehaviour
 {
+    public enum Trait
+    {
+        sharp,
+        slime,
+        solid
+    }
     public string unitName;
     public int level = 1;
     public int maxHealth;
