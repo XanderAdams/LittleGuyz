@@ -12,6 +12,8 @@ public class AnimatorManager : MonoBehaviour
     public AnimatorController sharp;
     public AnimatorController slime;
     public AnimatorController solid;
+
+    public AnimatorController boss;
     
     // Start is called before the first frame update
     void Start()
