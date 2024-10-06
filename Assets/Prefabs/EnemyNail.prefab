@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &428573320119522105
+--- !u!1 &253157475772317358
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6856854813711081869}
-  - component: {fileID: 2740402442921342114}
-  - component: {fileID: 4308900079272699511}
+  - component: {fileID: 7826498070826027293}
+  - component: {fileID: 8857833150657517676}
+  - component: {fileID: 6841351077412643628}
+  - component: {fileID: 7746574203048672923}
   m_Layer: 0
-  m_Name: EnemyTest
+  m_Name: EnemyNail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6856854813711081869
+--- !u!4 &7826498070826027293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428573320119522105}
+  m_GameObject: {fileID: 253157475772317358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.92, y: 1.742068, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2740402442921342114
+--- !u!212 &8857833150657517676
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428573320119522105}
+  m_GameObject: {fileID: 253157475772317358}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 1071499072, guid: ea69cdd7441154247827756ff87081fb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.98039216}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -328264219, guid: 77cc2df8568e40649b090f56ed43fe07, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,25 +86,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4308900079272699511
+--- !u!95 &6841351077412643628
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253157475772317358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 686e74dfae14f6a4b973c39419c61791, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7746574203048672923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428573320119522105}
+  m_GameObject: {fileID: 253157475772317358}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e75ff5344ed665498fb50e8461d12e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Michal
+  unitName: 
   level: 1
-  maxHealth: 5
-  currentHealth: 5
-  violence: 2
+  maxHealth: 0
+  currentHealth: 0
+  violence: 0
   reinforcement: 0
-  swiftness: 300
+  swiftness: 0
   TheNumber: 0
   TheNumber2: 0
   TheNumber3: 0
