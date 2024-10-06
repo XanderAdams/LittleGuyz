@@ -140,8 +140,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: hasTrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: unitName
       value: FleshGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: swiftness
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6856854813711081869, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: m_LocalScale.x
@@ -605,16 +613,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: flesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: trait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: hasTrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: unitName
       value: FleshGuy
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: violence
-      value: 200
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: swiftness
-      value: 4000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6856854813711081869, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: m_LocalScale.x
@@ -1014,6 +1034,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
+      propertyPath: flesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
+      propertyPath: hasTrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
+      propertyPath: violence
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789598916264697425, guid: 3e02f4e466d0488499218e806578ab49, type: 3}
+      propertyPath: swiftness
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1071,7 +1107,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6474580728661885120, guid: 3b92aa2191d9fb04288b24272c6c2ca4, type: 3}
+      propertyPath: notYourGuy
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5162813573674818275, guid: 3b92aa2191d9fb04288b24272c6c2ca4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
