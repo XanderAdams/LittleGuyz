@@ -608,6 +608,14 @@ PrefabInstance:
       propertyPath: unitName
       value: FleshGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: violence
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308900079272699511, guid: 29172f432015660478e23610aa7137bd, type: 3}
+      propertyPath: swiftness
+      value: 4000
+      objectReference: {fileID: 0}
     - target: {fileID: 6856854813711081869, guid: 29172f432015660478e23610aa7137bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 2

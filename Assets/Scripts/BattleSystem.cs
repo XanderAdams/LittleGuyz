@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -116,7 +117,7 @@ public class BattleSystem : MonoBehaviour
         {
             Debug.Log("You Win");
             dialogueText.text = "You win";
-            playerLittleGuy.exp = playerLittleGuy.exp + 10;
+            playerLittleGuy.exp = playerLittleGuy.exp + 10 + (enemyLittleGuy.level*enemyLittleGuy.level);
             if(playerLittleGuy.exp>=100)
             {
                 dialogueText.text = "Level Up!";
@@ -127,12 +128,15 @@ public class BattleSystem : MonoBehaviour
 
             
             panel.SetActive(false);
+            Destroy(enemyLittleGuy.gameObject);
 
 
         }
         else if(state == BattleState.LOST)
         {
              dialogueText.text = "DIE";
+            Destroy(CombatInfoHolder.Instance.gameObject);
+            SceneManager.LoadScene("Mainmenu");
         }
     }
     void PlayerTurn()
