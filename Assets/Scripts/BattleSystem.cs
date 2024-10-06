@@ -41,76 +41,7 @@ public class BattleSystem : MonoBehaviour
 
         enemyLittleGuy = CombatInfoHolder.Instance.notYourGuy;
 
-        if(!playerLittleGuy.hasTrait)
-        {
-            playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().flesh;
-        }
-        else if(playerLittleGuy.flesh)
-        {
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.sharp)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSharp;
-            }
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.solid)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSolid;
-            }
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.slime)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSlime;
-            }
-        }
-        else
-        {
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.sharp)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().sharp;
-            }
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.solid)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().solid;
-            }
-            if(playerLittleGuy.trait == LittleGuyzStats.Trait.slime)
-            {
-                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().slime;
-            }
-        }
-
-
-        if(!enemyLittleGuy.hasTrait)
-        {
-            enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().flesh;
-        }
-        else if(enemyLittleGuy.flesh)
-        {
-            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.sharp)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSharp;
-            }
-            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.solid)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSolid;
-            }
-             if(enemyLittleGuy.trait == LittleGuyzStats.Trait.slime)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSlime;
-            }
-        }
-        else
-        {
-            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.sharp)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().sharp;
-            }
-            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.solid)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().solid;
-            }
-            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.slime)
-            {
-                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().slime;
-            }
-        }
+        UpdateLittleGuy();       
 
 
         dialogueText.text = " A wild Little Guy" + enemyLittleGuy.unitName + "Gets you";
@@ -133,6 +64,8 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("WHATT");
              StartCoroutine(EnemyTurn());
         }
+
+        
     }
 
     IEnumerator PlayerAttack()
@@ -153,6 +86,43 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
+    }
+    void PlayerAbsorb()
+    {
+        if(enemyLittleGuy.hasTrait)
+        {
+            if(playerLittleGuy.hasTrait)
+            {
+                if(playerLittleGuy.trait == enemyLittleGuy.trait)
+                {
+                    playerLittleGuy.flesh = false;
+                }
+                else
+                {
+                    playerLittleGuy.hasTrait = false;
+                    playerLittleGuy.flesh = true;
+                }
+            }
+            else if (!playerLittleGuy.hasTrait)
+            {
+                playerLittleGuy.trait = enemyLittleGuy.trait;
+                playerLittleGuy.hasTrait = true;
+                playerLittleGuy.flesh = true;
+            }
+
+        }
+        else if(!enemyLittleGuy.hasTrait)
+        {
+            if(playerLittleGuy.flesh)
+            {
+                playerLittleGuy.hasTrait = false;
+            }
+            else
+            {
+                playerLittleGuy.flesh = true;
+            }
+        }
+        UpdateLittleGuy();
     }
 
     IEnumerator EnemyTurn()
@@ -226,12 +196,20 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerAttack());
     }
 
+    public void OnAbsorbButton()
+    {
+       PlayerAbsorb();
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
     public void OnRunButton()
     {
         if(state == BattleState.PLAYERTURN)
         {
             if(enemyLittleGuy.swiftness <  playerLittleGuy.swiftness)
             {
+                 CombatInfoHolder.Instance.Download(GameObject.FindWithTag("Player").GetComponent<Party>().yourGuy);
                 panel.SetActive(false);
             }
             else
@@ -243,6 +221,81 @@ public class BattleSystem : MonoBehaviour
             }
             
         }
+    }
+
+    public void UpdateLittleGuy()
+    {
+        if(!playerLittleGuy.hasTrait)
+        {
+            playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().flesh;
+        }
+        else if(playerLittleGuy.flesh)
+        {
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.sharp)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSharp;
+            }
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.solid)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSolid;
+            }
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.slime)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSlime;
+            }
+        }
+        else
+        {
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.sharp)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().sharp;
+            }
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.solid)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().solid;
+            }
+            if(playerLittleGuy.trait == LittleGuyzStats.Trait.slime)
+            {
+                playerBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().slime;
+            }
+        }
+
+
+        if(!enemyLittleGuy.hasTrait)
+        {
+            enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().flesh;
+        }
+        else if(enemyLittleGuy.flesh)
+        {
+            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.sharp)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSharp;
+            }
+            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.solid)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSolid;
+            }
+             if(enemyLittleGuy.trait == LittleGuyzStats.Trait.slime)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().fleshSlime;
+            }
+        }
+        else
+        {
+            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.sharp)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().sharp;
+            }
+            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.solid)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().solid;
+            }
+            if(enemyLittleGuy.trait == LittleGuyzStats.Trait.slime)
+            {
+                enemyBattleStation.GetComponent<Animator>().runtimeAnimatorController = CombatInfoHolder.Instance.gameObject.GetComponent<AnimatorManager>().slime;
+            }
+        }
+
     }
 
 
