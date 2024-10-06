@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonFloor2.unity
     guid: 88e2e3127b3e1b14489eec143f07f1e8
+  - enabled: 1
+    path: Assets/Scenes/BossDungeonFloor.unity
+    guid: e3221ca95802e5243ab892eb55ab8a5f
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: f11415a9227d08543b50032eb0169061
   m_configObjects: {}

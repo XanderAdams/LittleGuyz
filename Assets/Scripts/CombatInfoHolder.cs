@@ -17,6 +17,7 @@ public class CombatInfoHolder : MonoBehaviour
         }
         else
         {
+            CombatInfoHolder.Instance.Download(GameObject.FindWithTag("Player").GetComponent<Party>().yourGuy);
             Destroy(this.gameObject);
         }
     }

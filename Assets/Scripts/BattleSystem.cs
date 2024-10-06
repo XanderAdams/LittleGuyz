@@ -44,7 +44,7 @@ public class BattleSystem : MonoBehaviour
         UpdateLittleGuy();       
 
 
-        dialogueText.text = " A wild Little Guy" + enemyLittleGuy.unitName + "Gets you";
+        dialogueText.text = " A wild Little Guy " + enemyLittleGuy.unitName + " Gets you";
 
         playerHUD.SetHUD( playerLittleGuy);
         enemyHud.SetHUD(enemyLittleGuy);
@@ -127,7 +127,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-         dialogueText.text = enemyLittleGuy.unitName + "Attacks";
+         dialogueText.text = enemyLittleGuy.unitName + " Attacks";
 
          yield return new WaitForSeconds(1f);
 
@@ -159,7 +159,7 @@ public class BattleSystem : MonoBehaviour
         {
             Debug.Log("You Win");
             dialogueText.text = "You win";
-            playerLittleGuy.exp = playerLittleGuy.exp + 10 + (enemyLittleGuy.level*enemyLittleGuy.level);
+            playerLittleGuy.exp = playerLittleGuy.exp + (10 * (enemyLittleGuy.level*enemyLittleGuy.level));
             if(playerLittleGuy.exp>=100)
             {
                 dialogueText.text = "Level Up!";

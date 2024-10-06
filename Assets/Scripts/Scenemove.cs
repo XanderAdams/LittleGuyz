@@ -16,7 +16,7 @@ public class Scenemove : MonoBehaviour
     {
         panel = GameObject.Find("/Bigguy/Canvas/BattleScreen");
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")&&gameObject.GetComponent<Party>()==null)
         {
