@@ -103,7 +103,7 @@ MonoBehaviour:
   currentHealth: 5
   violence: 2
   reinforcement: 0
-  swiftness: 10
+  swiftness: 300
   TheNumber: 0
   TheNumber2: 0
   TheNumber3: 0

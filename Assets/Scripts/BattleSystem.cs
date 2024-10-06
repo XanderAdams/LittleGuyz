@@ -50,15 +50,18 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        if(playerLittleGuy.swiftness < enemyLittleGuy.swiftness)
+        if(enemyLittleGuy.swiftness <  playerLittleGuy.swiftness)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
+            Debug.Log("Player Faster");
         }
-        if( enemyLittleGuy.swiftness<playerLittleGuy.swiftness)
+        if( playerLittleGuy.swiftness < enemyLittleGuy.swiftness)
         {
             state = BattleState.ENEMYTURN;
             EnemyTurn();
+            Debug.Log("WHATT");
+             StartCoroutine(EnemyTurn());
         }
     }
 
@@ -73,6 +76,7 @@ public class BattleSystem : MonoBehaviour
         if(isDead)
         {
             state = BattleState.WON;
+             EndBattle();
         }
         else
         {
@@ -115,6 +119,12 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You win";
             playerLittleGuy.exp = playerLittleGuy.exp + 10;
+            if(playerLittleGuy.exp>=100)
+            {
+                dialogueText.text = "Level Up!";
+            }
+            //wait here on this line
+            playerHUD.LevelThisMan(playerLittleGuy.level);
         }
         else if(state == BattleState.LOST)
         {
