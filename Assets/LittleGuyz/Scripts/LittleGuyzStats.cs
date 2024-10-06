@@ -37,10 +37,6 @@ public class LittleGuyzStats : MonoBehaviour
 
    void Update()
    {
-     if(Input.GetKeyDown(KeyCode.T))
-     {      
-        TakeDamage(violence,Trait.sharp);
-     }
 
       if(Input.GetKeyDown(KeyCode.R))
      {
@@ -50,35 +46,46 @@ public class LittleGuyzStats : MonoBehaviour
      LevelUp();
    }
 
-   public void TakeDamage(int violence, Trait damageType)
+   public bool TakeDamage(int violence, Trait damageType, bool attackHasTrait)
    {
-        if(hasTrait)
+        if(attackHasTrait)
         {
-            Debug.Log((int)trait);
-            Debug.Log("type " + (int)damageType);
-            
-            if ((int)trait == ((int)damageType+1)%3)
+
+            if(hasTrait)
             {
-                Debug.Log("weak");
-                violence*=2;
+                Debug.Log((int)trait);
+                Debug.Log("type " + (int)damageType);
+                
+                if ((int)trait == ((int)damageType+1)%3)
+                {
+                    Debug.Log("weak");
+                    violence *= 2*((flesh ? 0:1)+1);
+                }
+                else if ((int)trait == ((int)damageType+2)%3)
+                {
+                    Debug.Log("resist");
+                    violence = (int)(violence/(2*((flesh ? 0:1)+1)));
+                }
             }
-            else if ((int)trait == ((int)damageType+2)%3)
+            violence-= reinforcement;
+            violence = Mathf.Clamp(violence,1,int.MaxValue);
+            currentHealth -= violence;
+            Debug.Log(transform.name + "takes" + violence + "damage.");
+
+            if(currentHealth<=0)
             {
-                Debug.Log("resist");
-                violence = (int)(violence/2);
+                Die();
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
-        violence-= reinforcement;
-        violence = Mathf.Clamp(violence,1,int.MaxValue);
-        currentHealth -= violence;
-        Debug.Log(transform.name + "takes" + violence + "damage.");
-
-        if(currentHealth<=0)
+        else
         {
-            Die();
+            return TakeDamage(violence);
         }
-         
-
    }
    public bool TakeDamage(int violence)
    {
