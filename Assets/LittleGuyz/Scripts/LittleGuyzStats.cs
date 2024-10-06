@@ -26,6 +26,8 @@ public class LittleGuyzStats : MonoBehaviour
     public bool hasTrait;
     public int typemod;
     public int exp;
+
+    
     
    void Awake()
    {
@@ -109,7 +111,7 @@ public class LittleGuyzStats : MonoBehaviour
         TheNumber2 = Random.Range(0,11);
         TheNumber3 = Random.Range(0,11);
         TheNumber4 = Random.Range(0,11);
-        if(exp == 100)
+        if(exp >= 100)
         {
             violence = violence + TheNumber ;
             maxHealth = maxHealth + TheNumber2;
@@ -119,7 +121,5 @@ public class LittleGuyzStats : MonoBehaviour
             level = level + 1;
             currentHealth = maxHealth;
         }
-        
-        
    }
 }
