@@ -3,8 +3,9 @@ using UnityEngine;
 {sharp,slime,solid}
 public class LittleGuyzStats : MonoBehaviour
 {
+    public string unitName;
     public int level = 1;
-    public int maxHealth=100;
+    public int maxHealth;
     public int currentHealth;
     public int violence;
     public int reinforcement;
@@ -24,15 +25,12 @@ public class LittleGuyzStats : MonoBehaviour
     public bool flesh;
     public bool hasTrait;
     public int typemod;
-    
-
-    
-
     public int exp;
     
    void Awake()
    {
         currentHealth = maxHealth;
+        
    }
 
    void Update()
@@ -77,9 +75,10 @@ public class LittleGuyzStats : MonoBehaviour
         {
             Die();
         }
+         
 
    }
-   public void TakeDamage(int violence)
+   public bool TakeDamage(int violence)
    {
         
         violence-= reinforcement;
@@ -90,6 +89,11 @@ public class LittleGuyzStats : MonoBehaviour
         if(currentHealth<=0)
         {
             Die();
+            return true;
+        }
+        else
+        {
+            return false;
         }
 
    }
