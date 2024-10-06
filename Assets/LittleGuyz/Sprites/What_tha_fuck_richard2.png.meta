@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ead961beb6cff44384b383369253aad
+guid: 2409eded6d44fe743b2fbe5d97c08e0c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Summoner_0
+      name: What_tha_fuck_richard2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12800
-        width: 3200
-        height: 3200
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8396c7595696c7042b56c8be14ed7e4c
-      internalID: -1556839058
+      spriteID: bd94571f5c4d27e49b37c4c260afc8ae
+      internalID: -1786426199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_1
+      name: What_tha_fuck_richard2_1
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 12800
-        width: 3200
-        height: 3200
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6281ce34a413943b0a5b6757ecf93e
-      internalID: 547914809
+      spriteID: 5d25d5bfaacc93746b2faf49475894ae
+      internalID: -267111935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_2
+      name: What_tha_fuck_richard2_2
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 12800
-        width: 3200
-        height: 3200
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75bd4c2537d5ad64990b05a9372f3d60
-      internalID: 1112881246
+      spriteID: 3cbef65832f6a8043b6953a17ce3d1d6
+      internalID: -988042404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_3
+      name: What_tha_fuck_richard2_3
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 12800
-        width: 3200
-        height: 3200
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e21d6a94a2bb4439fa012d060e3ab8
-      internalID: -2127680370
+      spriteID: 921a081f8fc1b9345b3994d5bf183f0d
+      internalID: 782066807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_4
+      name: What_tha_fuck_richard2_4
       rect:
         serializedVersion: 2
-        x: 12800
-        y: 12800
-        width: 3200
-        height: 3200
+        x: 4000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,125 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 014030b7a2731ae44906dae290f41181
-      internalID: -941573145
+      spriteID: a3d4122be7bd3aa449f8e88320dfd4ef
+      internalID: 1367003882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 9600
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f552ccea911b8914c93d7e570646cd88
-      internalID: -778840666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_6
-      rect:
-        serializedVersion: 2
-        x: 3200
-        y: 9600
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4aa31620e03027246bd210408671c072
-      internalID: 69578172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_7
-      rect:
-        serializedVersion: 2
-        x: 6400
-        y: 9600
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4c1ee21268cb544f9a922c9e7e49ab5
-      internalID: -647230899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_8
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 9600
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90c9f7d13ff6bc74a880f74289d72883
-      internalID: -491327636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_9
-      rect:
-        serializedVersion: 2
-        x: 12800
-        y: 9600
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a109a6c825ad78d469ae73c83b514e01
-      internalID: -1651675859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_10
+      name: What_tha_fuck_richard2_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 6400
-        width: 3200
-        height: 3200
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94505c6af7482714c8e80594cc5d2a4d
-      internalID: -1678292166
+      spriteID: a2ed431bb89bb1c4695103ea4e6acd57
+      internalID: -1798727997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_11
+      name: What_tha_fuck_richard2_6
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 6400
-        width: 3200
-        height: 3200
+        x: 1000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b802b65a5bd170d4a8be03299c70dbde
-      internalID: 1930153425
+      spriteID: c1f5026c36d826f44a90313b56bfb947
+      internalID: 858675806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_12
+      name: What_tha_fuck_richard2_7
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 6400
-        width: 3200
-        height: 3200
+        x: 2000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da430353e5f94e94b81d775423cce572
-      internalID: 22565010
+      spriteID: 8f6758103a028084bacd1a60577ec655
+      internalID: -1259125071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_13
+      name: What_tha_fuck_richard2_8
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 6400
-        width: 3200
-        height: 3200
+        x: 3000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afd42cc323fd303459ba1ace014d1779
-      internalID: -934163839
+      spriteID: bbd39397950abdf479ce6e05f4bbb141
+      internalID: -1591734678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_14
+      name: What_tha_fuck_richard2_9
       rect:
         serializedVersion: 2
-        x: 12800
-        y: 6400
-        width: 3200
-        height: 3200
+        x: 4000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd1a55d4ef222540ad66bbb294f925d
-      internalID: 1398163234
+      spriteID: 3740267355f2ca442904c8c1828f236c
+      internalID: -565800256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_15
+      name: What_tha_fuck_richard2_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 3200
-        width: 3200
-        height: 3200
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a962c48ed073a1459426433a2aa5224
-      internalID: -1686577074
+      spriteID: 7364ab63d2a330f499c92cc1b8480d0d
+      internalID: 478267968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_16
+      name: What_tha_fuck_richard2_11
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 3200
-        width: 3200
-        height: 3200
+        x: 1000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1762ce68f80cb7847bef2e51e6af1f44
-      internalID: 623396471
+      spriteID: dcc83ac0fff9a3847931ff97cd05c346
+      internalID: 1350323113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_17
+      name: What_tha_fuck_richard2_12
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 3200
-        width: 3200
-        height: 3200
+        x: 2000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f309bae587d146c48a2319f2bef76d2b
-      internalID: -1624576944
+      spriteID: be8cd9488793b774c987584a3d3f57a2
+      internalID: -376395112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_18
+      name: What_tha_fuck_richard2_13
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 3200
-        width: 3200
-        height: 3200
+        x: 3000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 667c3577228005945b49443d23e6e4f7
-      internalID: -2104299353
+      spriteID: c06b47c89252d6e46a5d888ae061797f
+      internalID: 1685641637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_19
+      name: What_tha_fuck_richard2_14
       rect:
         serializedVersion: 2
-        x: 12800
-        y: 3200
-        width: 3200
-        height: 3200
+        x: 4000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cdf3d34d2e720f429e07c81367c845e
-      internalID: -499955918
+      spriteID: 6df3d41e72b030f44b1af4e59ab04c6c
+      internalID: 49054068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_20
+      name: What_tha_fuck_richard2_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3200
-        height: 3200
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b171ea360e12722428afba95b92cf0e0
-      internalID: 936776038
+      spriteID: 41f867d69ffa64446be7d9064928478f
+      internalID: -1154500809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Summoner_21
+      name: What_tha_fuck_richard2_16
       rect:
         serializedVersion: 2
-        x: 3200
+        x: 1000
         y: 0
-        width: 3200
-        height: 3200
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,71 +473,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f9b9cb284469924c925325d1e6321e5
-      internalID: -499238238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_22
-      rect:
-        serializedVersion: 2
-        x: 6400
-        y: 0
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 410e457c78daadb47bdf56ecaea10ef9
-      internalID: -1821516358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_23
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 0
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dc6f6c2cac637f4ea6bf7727e11000c
-      internalID: -1792450061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Summoner_24
-      rect:
-        serializedVersion: 2
-        x: 12800
-        y: 0
-        width: 3200
-        height: 3200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78cf5c022daf32f40ab3b25d91dfbe85
-      internalID: 382178120
+      spriteID: 60c0f50ea3f54304c892c6d6f0af0b6d
+      internalID: -529561785
       vertices: []
       indices: 
       edges: []
@@ -671,31 +490,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Summoner_0: -1556839058
-      Summoner_1: 547914809
-      Summoner_10: -1678292166
-      Summoner_11: 1930153425
-      Summoner_12: 22565010
-      Summoner_13: -934163839
-      Summoner_14: 1398163234
-      Summoner_15: -1686577074
-      Summoner_16: 623396471
-      Summoner_17: -1624576944
-      Summoner_18: -2104299353
-      Summoner_19: -499955918
-      Summoner_2: 1112881246
-      Summoner_20: 936776038
-      Summoner_21: -499238238
-      Summoner_22: -1821516358
-      Summoner_23: -1792450061
-      Summoner_24: 382178120
-      Summoner_3: -2127680370
-      Summoner_4: -941573145
-      Summoner_5: -778840666
-      Summoner_6: 69578172
-      Summoner_7: -647230899
-      Summoner_8: -491327636
-      Summoner_9: -1651675859
+      What_tha_fuck_richard2_0: -1786426199
+      What_tha_fuck_richard2_1: -267111935
+      What_tha_fuck_richard2_10: 478267968
+      What_tha_fuck_richard2_11: 1350323113
+      What_tha_fuck_richard2_12: -376395112
+      What_tha_fuck_richard2_13: 1685641637
+      What_tha_fuck_richard2_14: 49054068
+      What_tha_fuck_richard2_15: -1154500809
+      What_tha_fuck_richard2_16: -529561785
+      What_tha_fuck_richard2_2: -988042404
+      What_tha_fuck_richard2_3: 782066807
+      What_tha_fuck_richard2_4: 1367003882
+      What_tha_fuck_richard2_5: -1798727997
+      What_tha_fuck_richard2_6: 858675806
+      What_tha_fuck_richard2_7: -1259125071
+      What_tha_fuck_richard2_8: -1591734678
+      What_tha_fuck_richard2_9: -565800256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
