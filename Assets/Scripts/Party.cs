@@ -20,5 +20,15 @@ public class Party : MonoBehaviour
     public void Upload(LittleGuyzStats target)
     {
         target.unitName = yourGuy.unitName;
+        target.level = yourGuy.level;
+        target.maxHealth = yourGuy.maxHealth;
+        target.currentHealth = yourGuy.currentHealth;
+        target.violence = yourGuy.violence;
+        target.reinforcement = yourGuy.reinforcement;
+        target.swiftness = yourGuy.swiftness;
+        target.trait = yourGuy.trait;
+        target.flesh = yourGuy.flesh;
+        target.hasTrait = yourGuy.hasTrait;
+        target.exp = yourGuy.exp;
     }
 }
