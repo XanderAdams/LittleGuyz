@@ -10,6 +10,7 @@ public class Hopefullygridmovement : MonoBehaviour
     private float timeToMove = 0.2f;
 
     public GameObject panel;
+    public Animator animator;
 
     public bool canMove = true;
 
@@ -29,14 +30,23 @@ public class Hopefullygridmovement : MonoBehaviour
         if(canMove == true){
         
             if (Input.GetKey(KeyCode.W) && !isMoving)
-            { StartCoroutine(MovePlayer(Vector3.up)); }
+            { StartCoroutine(MovePlayer(Vector3.up)); 
+              animator.SetInteger("Facing",3);}
             if (Input.GetKey(KeyCode.A) && !isMoving)
-            { StartCoroutine(MovePlayer(Vector3.left)); }
+            { StartCoroutine(MovePlayer(Vector3.left)); 
+            animator.SetInteger("Facing",1);}
             if (Input.GetKey(KeyCode.S) && !isMoving)
-            { StartCoroutine(MovePlayer(Vector3.down)); }
+            { StartCoroutine(MovePlayer(Vector3.down)); 
+            animator.SetInteger("Facing",0);}
             if (Input.GetKey(KeyCode.D) && !isMoving)
-            { StartCoroutine(MovePlayer(Vector3.right)); }
+            { StartCoroutine(MovePlayer(Vector3.right)); 
+            animator.SetInteger("Facing",2);}
         }
+    }
+
+    void Start()
+    {
+        animator=gameObject.GetComponent<Animator>();
     }
     private IEnumerator MovePlayer(Vector3 direction)
     {
