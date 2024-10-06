@@ -792,9 +792,9 @@ GameObject:
   - component: {fileID: 2044250213}
   - component: {fileID: 2044250215}
   - component: {fileID: 2044250214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
