@@ -9,19 +9,34 @@ public class Hopefullygridmovement : MonoBehaviour
     private Vector3 oriPos, targetPos;
     private float timeToMove = 0.2f;
 
+    public GameObject panel;
+
+    public bool canMove = true;
+
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && !isMoving)
-        { StartCoroutine(MovePlayer(Vector3.up)); }
-        if (Input.GetKey(KeyCode.A) && !isMoving)
-        { StartCoroutine(MovePlayer(Vector3.left)); }
-        if (Input.GetKey(KeyCode.S) && !isMoving)
-        { StartCoroutine(MovePlayer(Vector3.down)); }
-        if (Input.GetKey(KeyCode.D) && !isMoving)
-        { StartCoroutine(MovePlayer(Vector3.right)); }
+        if(panel.activeInHierarchy == true)
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
+        if(canMove == true){
+        
+            if (Input.GetKey(KeyCode.W) && !isMoving)
+            { StartCoroutine(MovePlayer(Vector3.up)); }
+            if (Input.GetKey(KeyCode.A) && !isMoving)
+            { StartCoroutine(MovePlayer(Vector3.left)); }
+            if (Input.GetKey(KeyCode.S) && !isMoving)
+            { StartCoroutine(MovePlayer(Vector3.down)); }
+            if (Input.GetKey(KeyCode.D) && !isMoving)
+            { StartCoroutine(MovePlayer(Vector3.right)); }
+        }
     }
     private IEnumerator MovePlayer(Vector3 direction)
     {
