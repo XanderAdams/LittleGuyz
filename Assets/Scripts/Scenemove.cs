@@ -7,6 +7,10 @@ public class Scenemove : MonoBehaviour
 {
     public string sceneName;
     public string combatSceneName;
+
+    
+
+    public GameObject panel;
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player")&&gameObject.GetComponent<Party>()==null)
@@ -18,7 +22,7 @@ public class Scenemove : MonoBehaviour
         else if(collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Party>().Upload(CombatInfoHolder.Instance.yourGuy);
-            gameObject.GetComponent<Party>().Upload(CombatInfoHolder.Instance.notYourGuy);
+            CombatInfoHolder.Instance.notYourGuy=gameObject.GetComponent<Party>().yourGuy;
             LoadCombatScene();
         }
 
@@ -29,8 +33,9 @@ public class Scenemove : MonoBehaviour
     }
     public void LoadCombatScene()
     {
-
-        SceneManager.LoadScene(combatSceneName);
+        panel.SetActive(true);
+        panel.GetComponentInChildren<BattleSystem>().StartUp();
+        
     }
     
 }

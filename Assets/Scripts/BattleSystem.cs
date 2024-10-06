@@ -24,10 +24,10 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
-    
+    public GameObject panel;
 
     // Start is called before the first frame update
-    void Start()
+    public void StartUp()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
@@ -47,7 +47,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        if(enemyLittleGuy.swiftness <  playerLittleGuy.swiftness)
+        if(enemyLittleGuy.swiftness <=  playerLittleGuy.swiftness)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
@@ -114,6 +114,7 @@ public class BattleSystem : MonoBehaviour
     {
         if( state == BattleState.WON)
         {
+            Debug.Log("You Win");
             dialogueText.text = "You win";
             playerLittleGuy.exp = playerLittleGuy.exp + 10;
             if(playerLittleGuy.exp>=100)
@@ -122,6 +123,12 @@ public class BattleSystem : MonoBehaviour
             }
             //wait here on this line
             playerHUD.LevelThisMan(playerLittleGuy.level);
+            CombatInfoHolder.Instance.Download(GameObject.FindWithTag("Player").GetComponent<Party>().yourGuy);
+
+            
+            panel.SetActive(false);
+
+
         }
         else if(state == BattleState.LOST)
         {

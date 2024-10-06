@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3608812528277917363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6281979119291542675}
+  - component: {fileID: 6474580728661885120}
+  - component: {fileID: 6225997289485381223}
+  - component: {fileID: 5162813573674818275}
+  m_Layer: 0
+  m_Name: info holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6281979119291542675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608812528277917363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35687366, y: 0.82939863, z: 0.03731818}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6474580728661885120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608812528277917363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5634f7bb12e6a40b7eb7db77515394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yourGuy: {fileID: 6225997289485381223}
+  notYourGuy: {fileID: 5162813573674818275}
+--- !u!114 &6225997289485381223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608812528277917363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e75ff5344ed665498fb50e8461d12e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: 
+  level: 1
+  maxHealth: 0
+  currentHealth: 0
+  violence: 0
+  reinforcement: 0
+  swiftness: 0
+  TheNumber: 0
+  TheNumber2: 0
+  TheNumber3: 0
+  TheNumber4: 0
+  trait: 0
+  flesh: 0
+  hasTrait: 0
+  typemod: 0
+  exp: 0
+--- !u!114 &5162813573674818275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608812528277917363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e75ff5344ed665498fb50e8461d12e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: 
+  level: 1
+  maxHealth: 0
+  currentHealth: 0
+  violence: 0
+  reinforcement: 0
+  swiftness: 0
+  TheNumber: 0
+  TheNumber2: 0
+  TheNumber3: 0
+  TheNumber4: 0
+  trait: 0
+  flesh: 0
+  hasTrait: 0
+  typemod: 0
+  exp: 0
