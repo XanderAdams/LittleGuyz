@@ -9,6 +9,8 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI nameText;
      public TextMeshProUGUI levelText;
      public Slider hpSlider;
+
+     LittleGuyzStats playerLittleGuy;
      
 
      public void SetHUD(LittleGuyzStats stats)
@@ -22,6 +24,14 @@ public class BattleHud : MonoBehaviour
      public void SetHP(int hp)
      {
        hpSlider.value = hp;
+       Debug.Log("BRUHHHH");
      }
+     public void LevelThisMan(int lvl)
+     {
+        levelText.text = "lvl" + lvl;
+     }
+
+     
+     
 
 }
