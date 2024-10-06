@@ -8,8 +8,6 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 
-    public GameObject littleGuyPrefab;
-    public GameObject enemyPrefab;
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
@@ -37,11 +35,10 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject playerGo = Instantiate(littleGuyPrefab, playerBattleStation);
-        playerLittleGuy = playerGo.GetComponent<LittleGuyzStats>();
+        
+        playerLittleGuy = CombatInfoHolder.Instance.yourGuy;
 
-        GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyLittleGuy = enemyGo.GetComponent<LittleGuyzStats>();
+        enemyLittleGuy = CombatInfoHolder.Instance.notYourGuy;
 
         dialogueText.text = " A wild Little Guy" + enemyLittleGuy.unitName + "Gets you";
 
